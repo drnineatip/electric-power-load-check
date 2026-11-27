@@ -884,14 +884,14 @@
             <div class="cyber-card rounded-2xl p-5 space-y-2">
               <h3 class="text-lg font-bold text-cyan-300">3. การติดตามสถานะและการปิดงานประเมิน KPI</h3>
               <p class="text-sm text-slate-200 leading-relaxed">
-                ตรวจสอบความคืบหน้างานซ่อมตามแถบสีแจ้งเตือน (สีเหลือง-มอบหมายงานแล้ว, สีฟ้า-อยู่ระหว่างปฏิบัติงาน, สีเขียว-ปฏิบัติงานเรียบร้อย, สีแดง-เลยเวลา SLA) และกด <strong>ปิดงาน</strong> พร้อมให้คะแนนประเมิน (10, 7, 5, 3, 1) เพื่อบันทึกค่า KPI ของผู้รับจ้าง
+                ตรวจสอบความคืบหน้างานซ่อมตามแถบสีแจ้งเตือน (สีเหลือง-มอบหมายงานแล้ว, สีฟ้า-อยู่ระหว่างปฏิบัติงาน, สีเขียว-ปฏิบัติงานเรียบร้อย, สีแดง-เลยเวลา SLA) และกด <strong>ปิดงาน</strong> พร้อมให้คะแนนประเมิน (10, 7, 5, 3, 1) เพื่อบันทึกค่า KPI ของผู้ให้บริการ
               </p>
             </div>
 
             <div class="cyber-card rounded-2xl p-5 space-y-2">
               <h3 class="text-lg font-bold text-cyan-300">4. การบริหารจัดการระบบ (Administrator)</h3>
               <p class="text-sm text-slate-200 leading-relaxed">
-                สงวนสิทธิ์เฉพาะผู้มีบทบาท <strong>ผู้ดูแลระบบ (Admin)</strong> เท่านั้น สำหรับเพิ่ม/ลบผู้ใช้งาน จัดการรายการโคมไฟฟ้า ตั้งค่าการแจ้งเตือน เชื่อมต่อ Log Server และบริหารข้อมูลผู้รับจ้างภายนอก
+                สงวนสิทธิ์เฉพาะผู้มีบทบาท <strong>ผู้ดูแลระบบ (Admin)</strong> เท่านั้น สำหรับเพิ่ม/ลบผู้ใช้งาน จัดการรายการโคมไฟฟ้า ตั้งค่าการแจ้งเตือน เชื่อมต่อ Log Server และบริหารข้อมูลผู้ให้บริการจากภายนอก
               </p>
             </div>
           </div>
@@ -1066,7 +1066,7 @@
         <section id="view-issue-2" class="hidden issue-section space-y-5">
           <div>
             <h2 class="text-xl font-bold text-white">ตรวจสอบสถานการดำเนินการซ่อมบำรุง</h2>
-            <p class="text-sm text-sky-300/80">ติดตามสถานะการปฏิบัติงานของผู้รับจ้างและระยะเวลา SLA</p>
+            <p class="text-sm text-sky-300/80">ติดตามสถานะการปฏิบัติงานของผู้ให้บริการและระยะเวลา SLA</p>
           </div>
 
           <!-- Status Color Legend -->
@@ -1240,7 +1240,7 @@
           </button>
           <button onclick="switchAdminMenu('5-outsource-add')" id="nav-admin-5-outsource-add" class="admin-nav-btn w-full text-left pl-7 pr-3 py-2 rounded-xl flex items-center gap-2 text-xs font-medium text-sky-300 transition">
             <i class="fa-solid fa-plus-circle"></i>
-            <span>จัดการผู้รับจ้าง (Outsource)</span>
+            <span>จัดการผู้ให้บริการ (Outsource)</span>
           </button>
         </div>
 
@@ -1480,10 +1480,10 @@
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
               <h2 class="text-xl font-bold text-white">จัดการ ผู้ให้บริการภายนอก (Outsource Management)</h2>
-              <p class="text-sm text-sky-300/80">บริหารข้อมูลบริษัทผู้รับจ้าง พื้นที่รับผิดชอบ และคะแนน KPI</p>
+              <p class="text-sm text-sky-300/80">บริหารข้อมูลบริษัทผู้ให้บริการ พื้นที่รับผิดชอบ และคะแนน KPI</p>
             </div>
             <button onclick="switchAdminMenu('5-outsource-add')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center gap-2">
-              <i class="fa-solid fa-plus"></i> เพิ่มผู้ใช้งาน (ผู้รับจ้าง)
+              <i class="fa-solid fa-plus"></i> เพิ่มผู้ใช้งาน (ผู้ให้บริการ)
             </button>
           </div>
 
@@ -1499,7 +1499,7 @@
                     <th class="py-3 px-3">พื้นที่รับผิดชอบ 1</th>
                     <th class="py-3 px-3">พื้นที่รับผิดชอบ 2</th>
                     <th class="py-3 px-3 text-center">KPI</th>
-                    <th class="py-3 px-3 text-center">จัดการผู้รับจ้าง</th>
+                    <th class="py-3 px-3 text-center">จัดการผู้ให้บริการ</th>
                   </tr>
                 </thead>
                 <tbody id="admin-outsource-tbody" class="divide-y divide-sky-500/15">
@@ -1510,11 +1510,11 @@
           </div>
         </section>
 
-        <!-- Admin Submenu 5-outsource-add: เพิ่มผู้รับจ้าง -->
+        <!-- Admin Submenu 5-outsource-add: เพิ่มผู้ให้บริการ -->
         <section id="view-admin-5-outsource-add" class="hidden admin-section max-w-xl">
           <div class="cyber-card cyber-card-glow rounded-2xl p-6 space-y-4">
             <h2 class="text-xl font-bold text-cyan-300 border-b border-sky-500/25 pb-3">
-              จัดการผู้รับจ้าง (Outsource) — เพิ่มผู้ให้บริการ
+              จัดการผู้ให้บริการ (Outsource) — เพิ่มผู้ให้บริการ
             </h2>
             <form onsubmit="event.preventDefault(); saveNewOutsource();" class="space-y-4">
               <div>
